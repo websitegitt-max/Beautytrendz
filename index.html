@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATELIER ÉLAN | Luxury Unisex Hair & Aesthetic Studio</title>
+  <meta name="description" content="Atelier Élan is an architectural luxury unisex salon offering bespoke precision styling, color chemistry, executive grooming, and dermal therapies in Bengaluru.">
+  <!-- Tailwind CSS CDN for instant zero-build rendering -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            alabaster: '#FAF8F5',
+            linen: '#F4EFE6',
+            obsidian: '#121211',
+            charcoal: '#1E1E1C',
+            mutedGold: '#C5A880',
+            deepGold: '#A8875A',
+            softBorder: '#E6E0D6',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #121211;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+  </style>
+</head>
+<body class="bg-alabaster text-obsidian antialiased selection:bg-mutedGold selection:text-white">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-alabaster/95 backdrop-blur-md border-b border-softBorder transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="font-editorial text-2xl md:text-3xl font-bold tracking-widest uppercase">Atelier Élan</span>
+        <span class="text-[10px] tracking-[0.25em] text-neutral-500 uppercase -mt-1">Unisex Haute Coiffure</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#about" class="text-neutral-700 hover:text-obsidian transition-colors">Philosophy</a>
+        <a href="#services" class="text-neutral-700 hover:text-obsidian transition-colors">Our Services</a>
+        <a href="#stylists" class="text-neutral-700 hover:text-obsidian transition-colors">Master Stylists</a>
+        <a href="#gallery" class="text-neutral-700 hover:text-obsidian transition-colors">Lookbook</a>
+        <a href="#location" class="text-neutral-700 hover:text-obsidian transition-colors">Studio & Map</a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#booking" class="bg-obsidian text-alabaster px-6 py-2.5 text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+          Reserve Appointment
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden text-obsidian p-2 focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-alabaster border-b border-softBorder px-6 py-6 flex flex-col gap-4">
+      <a href="#about" class="mobile-nav-link text-base font-medium text-neutral-800">Philosophy</a>
+      <a href="#services" class="mobile-nav-link text-base font-medium text-neutral-800">Our Services</a>
+      <a href="#stylists" class="mobile-nav-link text-base font-medium text-neutral-800">Master Stylists</a>
+      <a href="#gallery" class="mobile-nav-link text-base font-medium text-neutral-800">Lookbook</a>
+      <a href="#location" class="mobile-nav-link text-base font-medium text-neutral-800">Studio & Map</a>
+      <a href="#booking" class="mobile-nav-link text-center bg-obsidian text-alabaster py-3 text-xs font-semibold uppercase tracking-widest mt-2">Reserve Appointment</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-linen/50 border-b border-softBorder overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-25">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Salon Interior" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+      <span class="inline-block text-xs uppercase tracking-[0.3em] font-semibold text-deepGold mb-4">Precision Aesthetics & Bespoke Grooming</span>
+      <h1 class="font-editorial text-5xl sm:text-6xl md:text-7xl font-light text-obsidian leading-tight mb-6">
+        Architectural beauty, sculptured for individuality.
+      </h1>
+      <p class="text-neutral-600 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10">
+        A tranquil haven where precision French cut techniques meet organic scalp therapy and progressive men's texture tailoring.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#services" class="w-full sm:w-auto px-8 py-3.5 bg-obsidian text-alabaster text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+          Explore Services
+        </a>
+        <a href="#booking" class="w-full sm:w-auto px-8 py-3.5 border border-obsidian text-obsidian text-xs font-semibold uppercase tracking-widest hover:bg-obsidian hover:text-alabaster transition-colors">
+          Book Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy / About Section -->
+  <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 relative">
+        <div class="aspect-[4/5] bg-neutral-200 overflow-hidden shadow-sm">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Consultation" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="lg:col-span-6 flex flex-col justify-center">
+        <span class="text-xs uppercase tracking-[0.25em] text-deepGold font-semibold mb-3">Our Ethos</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl font-light text-obsidian mb-6 leading-tight">
+          Where science meets sartorial hair artistry.
+        </h2>
+        <p class="text-neutral-600 font-light leading-relaxed mb-6">
+          Founded on the principle that true elegance is bespoke, Atelier Élan rejects cookie-cutter styling. Every visit begins with an intimate diagnostic consultation examining bone structure, growth direction, and personal routine.
+        </p>
+        <p class="text-neutral-600 font-light leading-relaxed mb-8">
+          Operating with medical-grade UV and dry-heat autoclave sterilization, single-use botanical linen, and eco-certified treatments, our salon provides an immaculate, quiet retreat in Bengaluru.
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-softBorder">
+          <div>
+            <div class="font-editorial text-3xl font-light text-obsidian">100%</div>
+            <div class="text-[11px] uppercase tracking-wider text-neutral-500 mt-1">Autoclave Sterilized</div>
+          </div>
+          <div>
+            <div class="font-editorial text-3xl font-light text-obsidian">Tier-1</div>
+            <div class="text-[11px] uppercase tracking-wider text-neutral-500 mt-1">Global Color Chemists</div>
+          </div>
+          <div>
+            <div class="font-editorial text-3xl font-light text-obsidian">Zero</div>
+            <div class="text-[11px] uppercase tracking-wider text-neutral-500 mt-1">Ammonia Formulations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services Section (Zero Prices, Small Photos, Women & Men Tabs) -->
+  <section id="services" class="py-24 bg-linen/40 border-y border-softBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-deepGold font-semibold mb-2 block">Curation</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl font-light text-obsidian mb-4">Our Services</h2>
+        <p class="text-neutral-600 font-light text-sm md:text-base">
+          Crafted rituals designed for distinction. Select between our dedicated collections.
+        </p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex p-1 bg-alabaster border border-softBorder rounded-none">
+          <button id="tabWomenBtn" onclick="switchServiceTab('women')" class="px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-all bg-obsidian text-alabaster">
+            Women's Collection
+          </button>
+          <button id="tabMenBtn" onclick="switchServiceTab('men')" class="px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-all text-neutral-600 hover:text-obsidian">
+            Men's Collection
+          </button>
+        </div>
+      </div>
+
+      <!-- Women's Services Grid -->
+      <div id="womenServices" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Haute Cut & Restyle" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Styling</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Haute Cut & Architectural Restyle</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Bespoke consultation, clarifying scalp wash, directional precision cutting tailored to face silhouette, and editorial thermal blowout finish.
+          </p>
+          <a href="#booking" onclick="preselectService('Haute Cut & Architectural Restyle')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="French Balayage" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Color Chemistry</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Artisan French Balayage & Gloss</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Freehand dimensional painting with bond-multiplying infusers, curated tone refinement, and a mirror-finish peptide acid gloss bath.
+          </p>
+          <a href="#booking" onclick="preselectService('Artisan French Balayage & Gloss')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Keratin Rejuvenation" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Restoration</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Molecular Keratin Restoration</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Formaldehyde-free bio-active restructuring therapy sealing porosity, eradicating frizzy textures, and locking in diamond humidity defense.
+          </p>
+          <a href="#booking" onclick="preselectService('Molecular Keratin Restoration')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Botanical Facial" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Aesthetics</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Cellular Botanical Radiance Facial</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Multi-stage enzymatic deep cleansing, ultrasonic serum delivery, chilled quartz stone lymphatic drainage, and customized biocellulose infusion.
+          </p>
+          <a href="#booking" onclick="preselectService('Cellular Botanical Radiance Facial')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=600&q=80" alt="Trichology Therapy" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Scalp Sciences</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Trichology Scalp Detox & Spa</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Micro-camera follicle diagnosis, organic clay scrub exfoliation, steam ozone therapy, and acupressure cranium massage ritual.
+          </p>
+          <a href="#booking" onclick="preselectService('Trichology Scalp Detox & Spa')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Bridal Haute Styling" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Couture</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Bridal & Red Carpet Artistry</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Comprehensive trial consultation, custom structural updos, veil and accessory pinning, and long-wear HD beauty setting.
+          </p>
+          <a href="#booking" onclick="preselectService('Bridal & Red Carpet Artistry')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+      </div>
+
+      <!-- Men's Services Grid (Hidden by default) -->
+      <div id="menServices" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Men Card 1 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Executive Precision Cut" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Barber Craft</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Executive Precision Cut & Taper</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Comprehensive consultation, scissor-over-comb texturizing, clean neck taper, energizing menthol wash, and matte clay finish.
+          </p>
+          <a href="#booking" onclick="preselectService('Executive Precision Cut & Taper')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Men Card 2 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Royal Shave" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Wet Grooming</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Royal Hot Towel Straight-Razor Shave</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Pre-shave sandalwood essential oils, dual lavender steamed towels, traditional straight-edge blade glide, and cooling alum balm compress.
+          </p>
+          <a href="#booking" onclick="preselectService('Royal Hot Towel Straight-Razor Shave')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Men Card 3 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Beard Architecture" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Sculpting</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Beard Architecture & Fade Conditioning</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Jawline symmetry contouring, cheek line razor definition, warm argan oil deep treatment, and organic styling wax finish.
+          </p>
+          <a href="#booking" onclick="preselectService('Beard Architecture & Fade Conditioning')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Men Card 4 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Grey Camouflage" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Discreet Color</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Natural Grey Camouflage & Blending</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Ammonia-free 10-minute tone-on-tone treatment providing subtle, undetectable salt-and-pepper reduction without artificial warm fade.
+          </p>
+          <a href="#booking" onclick="preselectService('Natural Grey Camouflage & Blending')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Men Card 5 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Charcoal Facial" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Dermal Care</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Executive Charcoal Purifying Facial</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Targeted pore extraction, activated bamboo charcoal mask, razor burn defense infusion, and firming neck acupressure.
+          </p>
+          <a href="#booking" onclick="preselectService('Executive Charcoal Purifying Facial')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+
+        <!-- Men Card 6 -->
+        <div class="bg-alabaster border border-softBorder p-5 flex flex-col hover:border-neutral-400 transition-all duration-300">
+          <div class="aspect-[16/10] overflow-hidden mb-5 bg-neutral-100">
+            <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=600&q=80" alt="Scalp Invigoration" class="w-full h-full object-cover">
+          </div>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-deepGold mb-1">Hair Wellness</span>
+          <h3 class="font-editorial text-2xl font-light text-obsidian mb-2">Tea Tree Follicle Energizing Ritual</h3>
+          <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+            Invigorating scalp exfoliation, caffeine-infused follicle stimulation, high-pressure rinse, and stress-release cervical spine massage.
+          </p>
+          <a href="#booking" onclick="preselectService('Tea Tree Follicle Energizing Ritual')" class="w-full py-2.5 text-center border border-obsidian text-obsidian text-[11px] uppercase tracking-widest font-semibold hover:bg-obsidian hover:text-alabaster transition-colors">
+            Reserve Service
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Frame Master Stylists Section -->
+  <section id="stylists" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs uppercase tracking-[0.25em] text-deepGold font-semibold mb-2 block">The Artisans</span>
+      <h2 class="font-editorial text-4xl sm:text-5xl font-light text-obsidian mb-4">Meet Our Master Stylists</h2>
+      <p class="text-neutral-600 font-light text-sm md:text-base">
+        A collective of internationally trained stylists, master colorists, and grooming authorities dedicated to singular craftsmanship.
+      </p>
+    </div>
+
+    <!-- 3 Frame Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Frame 1 -->
+      <div class="group bg-alabaster border border-softBorder p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
+        <div class="aspect-[3/4] overflow-hidden mb-6 bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Marcus Vance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+        </div>
+        <div class="text-xs uppercase tracking-widest text-deepGold font-semibold mb-1">Creative Director & Precision Cut</div>
+        <h3 class="font-editorial text-3xl font-light text-obsidian mb-1">Marcus Vance</h3>
+        <p class="text-[11px] uppercase tracking-wider text-neutral-400 mb-4">14+ Years Experience | London Academy Alum</p>
+        <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+          Specializes in geometric dry cuts, architectural bobs, and seamless weight distribution that grows out effortlessly over months.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Precision Cutting</span>
+          <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Editorial Styling</span>
+        </div>
+        <a href="#booking" onclick="preselectStylist('Marcus Vance')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-[11px] uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors">
+          Book With Marcus
+        </a>
+      </div>
+
+      <!-- Frame 2 -->
+      <div class="group bg-alabaster border border-softBorder p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
+        <div class="aspect-[3/4] overflow-hidden mb-6 bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Rao" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+        </div>
+        <div class="text-xs uppercase tracking-widest text-deepGold font-semibold mb-1">Master Colorist & Balayage Artisan</div>
+        <h3 class="font-editorial text-3xl font-light text-obsidian mb-1">Maya Rao</h3>
+        <p class="text-[11px] uppercase tracking-wider text-neutral-400 mb-4">11+ Years Experience | Paris Color Certified</p>
+        <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+          Celebrated for dimensional French balayage, corrective color alchemy, and luminous, damage-free blonde formulations tailored to Asian hair undertones.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Balayage Alchemy</span>
+          <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Corrective Color</span>
+        </div>
+        <a href="#booking" onclick="preselectStylist('Maya Rao')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-[11px] uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors">
+          Book With Maya
+        </a>
+      </div>
+
+      <!-- Frame 3 -->
+      <div class="group bg-alabaster border border-softBorder p-6 flex flex-col transition-all duration-300 hover:shadow-lg">
+        <div class="aspect-[3/4] overflow-hidden mb-6 bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Aryan Kapoor" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+        </div>
+        <div class="text-xs uppercase tracking-widest text-deepGold font-semibold mb-1">Master Barber & Texture Architect</div>
+        <h3 class="font-editorial text-3xl font-light text-obsidian mb-1">Aryan Kapoor</h3>
+        <p class="text-[11px] uppercase tracking-wider text-neutral-400 mb-4">9+ Years Experience | Traditional Wet Shave Master</p>
+        <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
+          An authority on surgical skin fades, straight-razor ergonomics, and facial hair structural mapping to complement individual facial geometry.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Skin Fades</span>
+          <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Beard Sculpting</span>
+        </div>
+        <a href="#booking" onclick="preselectStylist('Aryan Kapoor')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-[11px] uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors">
+          Book With Aryan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lookbook / Visual Gallery -->
+  <section id="gallery" class="py-24 bg-linen/30 border-y border-softBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-deepGold font-semibold mb-2 block">Portfolio</span>
+          <h2 class="font-editorial text-4xl sm:text-5xl font-light text-obsidian">Curated Lookbook</h2>
+        </div>
+        <p class="text-neutral-500 text-xs max-w-sm font-light mt-3 md:mt-0">
+          A glimpse into the daily transformations crafted within our studio suites.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-square overflow-hidden bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Look 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="aspect-square overflow-hidden bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Look 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="aspect-square overflow-hidden bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Look 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="aspect-square overflow-hidden bg-neutral-200">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Look 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Google Map Section (Faithfully matching user photo reference) -->
+  <section id="location" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs uppercase tracking-[0.25em] text-deepGold font-semibold mb-2 block">Visit Us</span>
+      <h2 class="font-editorial text-4xl sm:text-5xl font-light text-obsidian mb-4">Studio Location</h2>
+      <p class="text-neutral-600 font-light text-sm md:text-base">
+        Located in Bengaluru with private parking, valet services, and peaceful appointments.
+      </p>
+    </div>
+
+    <!-- Map Container with exact UI Overlays from Reference Photo -->
+    <div class="relative w-full h-[520px] rounded-none overflow-hidden border border-softBorder shadow-sm bg-neutral-100">
+      <!-- Embedded Google Map -->
+      <iframe 
+        title="Atelier Elan Salon Location Map"
+        class="w-full h-full border-0 filter contrast-[0.95] brightness-[1.02]"
+        src="https://maps.google.com/maps?q=110,%20Andrahalli%20Main%20Rd,%20Lingadeeranhalli,%20Syndicate%20Bank%20Layout,%20D%20Group%20Employees%20Layout,%20Bengaluru,%20Karnataka%20560091&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        loading="lazy" 
+        allowfullscreen>
+      </iframe>
+
+      <!-- Top-Left Floating White Card (Exact replica of Reference Image) -->
+      <div class="absolute top-6 left-6 z-20 max-w-xs bg-white p-4 shadow-lg border border-neutral-200 text-left hidden sm:block">
+        <div class="font-bold text-sm text-neutral-900 mb-1">110</div>
+        <p class="text-xs text-neutral-600 leading-snug mb-3">
+          110, Andrahalli Main Rd, Lingadeeranhalli, Syndicate Bank Layout, D Group Employees Layout, Bengaluru, Karnataka 560091, India
+        </p>
+        <a 
+          href="https://maps.google.com/?q=110,+Andrahalli+Main+Rd,+Lingadeeranhalli,+Bengaluru+560091" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#1a73e8] hover:bg-[#1557b0] text-white text-xs font-medium rounded transition-colors shadow-sm">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          Open in Maps
+        </a>
+      </div>
+
+      <!-- Bottom Floating Dark Banner (Exact replica of reference Black Ops banner) -->
+      <div class="absolute bottom-6 left-6 right-6 md:left-8 md:right-auto md:max-w-xl z-20 bg-[#121212] text-white p-3.5 shadow-2xl flex items-center justify-between gap-4 border border-neutral-800">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-[#CCFF00] flex-shrink-0 flex items-center justify-center text-black font-bold">
+            <i data-lucide="map-pin" class="w-5 h-5 text-black"></i>
+          </div>
+          <div>
+            <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">ATELIER ÉLAN SALON</div>
+            <div class="text-[11px] text-neutral-400 truncate max-w-[200px] sm:max-w-[320px]">
+              110, Andrahalli Main Rd, D Group Layout, Herohalli, Bengaluru 560091
+            </div>
+          </div>
+        </div>
+        <a 
+          href="https://www.google.com/maps/dir/?api=1&destination=110,+Andrahalli+Main+Rd,+Lingadeeranhalli,+Syndicate+Bank+Layout,+Bengaluru,+Karnataka+560091" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex-shrink-0 px-4 py-2.5 bg-[#CCFF00] hover:bg-[#b8e600] text-black text-xs font-bold uppercase tracking-wider transition-colors shadow-md">
+          GET DIRECTIONS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment / Booking Section -->
+  <section id="booking" class="py-24 bg-linen/50 border-t border-softBorder">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-deepGold font-semibold mb-2 block">Reservations</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl font-light text-obsidian mb-4">Book Your Private Consultation</h2>
+        <p class="text-neutral-600 font-light text-sm">
+          Please submit your preferred schedule. Our front desk concierge will confirm your reservation within 30 minutes.
+        </p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="bg-alabaster border border-softBorder p-8 md:p-12 shadow-sm space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-2" for="clientName">Full Name *</label>
+            <input type="text" id="clientName" required placeholder="e.g. Elena Rostova" class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-2" for="clientPhone">Phone Number *</label>
+            <input type="tel" id="clientPhone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-2" for="serviceSelect">Service Requested *</label>
+            <select id="serviceSelect" required class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm">
+              <option value="">Select a service...</option>
+              <optgroup label="Women's Collection">
+                <option value="Haute Cut & Architectural Restyle">Haute Cut & Architectural Restyle</option>
+                <option value="Artisan French Balayage & Gloss">Artisan French Balayage & Gloss</option>
+                <option value="Molecular Keratin Restoration">Molecular Keratin Restoration</option>
+                <option value="Cellular Botanical Radiance Facial">Cellular Botanical Radiance Facial</option>
+                <option value="Trichology Scalp Detox & Spa">Trichology Scalp Detox & Spa</option>
+                <option value="Bridal & Red Carpet Artistry">Bridal & Red Carpet Artistry</option>
+              </optgroup>
+              <optgroup label="Men's Collection">
+                <option value="Executive Precision Cut & Taper">Executive Precision Cut & Taper</option>
+                <option value="Royal Hot Towel Straight-Razor Shave">Royal Hot Towel Straight-Razor Shave</option>
+                <option value="Beard Architecture & Fade Conditioning">Beard Architecture & Fade Conditioning</option>
+                <option value="Natural Grey Camouflage & Blending">Natural Grey Camouflage & Blending</option>
+                <option value="Executive Charcoal Purifying Facial">Executive Charcoal Purifying Facial</option>
+                <option value="Tea Tree Follicle Energizing Ritual">Tea Tree Follicle Energizing Ritual</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-2" for="stylistSelect">Preferred Stylist</label>
+            <select id="stylistSelect" class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm">
+              <option value="First Available Master">First Available Master Stylist</option>
+              <option value="Marcus Vance">Marcus Vance (Creative Director)</option>
+              <option value="Maya Rao">Maya Rao (Master Colorist)</option>
+              <option value="Aryan Kapoor">Aryan Kapoor (Master Barber)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-2" for="appointmentDate">Preferred Date *</label>
+            <input type="date" id="appointmentDate" required class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-neutral-600 font-semibold mb-2" for="clientNotes">Special Hair / Skin Notes (Optional)</label>
+          <textarea id="clientNotes" rows="3" placeholder="Tell us about previous color treatments, allergies, or styling goals..." class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-4 bg-obsidian text-alabaster text-xs font-semibold uppercase tracking-[0.2em] hover:bg-neutral-800 transition-colors shadow-sm">
+          Confirm Reservation Request
+        </button>
+
+        <div id="bookingConfirmation" class="hidden p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs text-center font-medium">
+          Reservation request received! Our concierge team will contact you via WhatsApp / Phone to confirm your appointment window.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian text-alabaster pt-16 pb-12 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <span class="font-editorial text-2xl font-bold tracking-widest uppercase block mb-3">Atelier Élan</span>
+          <p class="text-neutral-400 text-xs leading-relaxed font-light mb-4">
+            An architectural unisex coiffure haven celebrating precision craft, bespoke coloring, and pure scalp wellness in Bengaluru.
+          </p>
+          <div class="text-[11px] text-deepGold uppercase tracking-widest">Tuesday – Sunday: 10:00 AM – 8:30 PM</div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-neutral-300 font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs text-neutral-400 font-light">
+            <li><a href="#about" class="hover:text-alabaster transition-colors">Salon Ethos</a></li>
+            <li><a href="#services" class="hover:text-alabaster transition-colors">Women's Collection</a></li>
+            <li><a href="#services" class="hover:text-alabaster transition-colors">Men's Collection</a></li>
+            <li><a href="#stylists" class="hover:text-alabaster transition-colors">Our Master Stylists</a></li>
+            <li><a href="#gallery" class="hover:text-alabaster transition-colors">Lookbook</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-neutral-300 font-semibold mb-4">Sanitation & Standards</h4>
+          <ul class="space-y-2 text-xs text-neutral-400 font-light">
+            <li>• Hospital-Grade UV & Autoclave Sterilization</li>
+            <li>• Single-Use Organic Bamboo Linens</li>
+            <li>• Formaldehyde-Free Keratin Formulations</li>
+            <li>• Ammonia-Free Mineral Hair Colors</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-neutral-300 font-semibold mb-4">Bengaluru Flagship</h4>
+          <p class="text-xs text-neutral-400 font-light leading-relaxed mb-3">
+            110, Andrahalli Main Rd, Lingadeeranhalli, Syndicate Bank Layout, Bengaluru, KA 560091
+          </p>
+          <p class="text-xs text-neutral-400 font-light">Concierge: +91 (80) 4122-ELAN</p>
+          <p class="text-xs text-neutral-400 font-light">Direct: concierge@atelier-elan.com</p>
+        </div>
+      </div>
+
+      <div class="border-t border-neutral-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-light">
+        <p>© 2026 Atelier Élan Salon Studio. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Designed for GitHub Pages & Production Deployment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Service Tab Switcher (Women vs Men)
+    function switchServiceTab(tab) {
+      const womenTab = document.getElementById('womenServices');
+      const menTab = document.getElementById('menServices');
+      const tabWomenBtn = document.getElementById('tabWomenBtn');
+      const tabMenBtn = document.getElementById('tabMenBtn');
+
+      if (tab === 'women') {
+        womenTab.classList.remove('hidden');
+        menTab.classList.add('hidden');
+        tabWomenBtn.className = 'px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-all bg-obsidian text-alabaster';
+        tabMenBtn.className = 'px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-all text-neutral-600 hover:text-obsidian';
+      } else {
+        womenTab.classList.add('hidden');
+        menTab.classList.remove('hidden');
+        tabMenBtn.className = 'px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-all bg-obsidian text-alabaster';
+        tabWomenBtn.className = 'px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-all text-neutral-600 hover:text-obsidian';
+      }
+    }
+
+    // Preselect Service into Booking Form
+    function preselectService(serviceName) {
+      const select = document.getElementById('serviceSelect');
+      if (select) {
+        select.value = serviceName;
+      }
+    }
+
+    // Preselect Stylist into Booking Form
+    function preselectStylist(stylistName) {
+      const select = document.getElementById('stylistSelect');
+      if (select) {
+        select.value = stylistName;
+      }
+    }
+
+    // Handle Booking Submission
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      const confirmation = document.getElementById('bookingConfirmation');
+      confirmation.classList.remove('hidden');
+      setTimeout(() => {
+        alert('Thank you! Your appointment request has been logged. Our concierge will call you shortly.');
+        document.getElementById('bookingForm').reset();
+      }, 400);
+    }
+  </script>
+</body>
+</html>
