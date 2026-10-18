@@ -49,12 +49,12 @@
 </head>
 <body class="bg-alabaster text-obsidian antialiased selection:bg-mutedGold selection:text-white">
 
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-40 bg-alabaster/95 backdrop-blur-md border-b border-softBorder transition-all duration-300">
+  <!-- Header / Navigation (Fixed: Locked to top) -->
+  <header class="fixed w-full top-0 z-50 bg-alabaster/95 backdrop-blur-md border-b border-softBorder transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="flex flex-col">
         <span class="font-editorial text-2xl md:text-3xl font-bold tracking-widest uppercase">Atelier Élan</span>
-        <span class="text-[10px] tracking-[0.25em] text-neutral-500 uppercase -mt-1">Unisex Haute Coiffure</span>
+        <span class="text-xs tracking-[0.2em] text-neutral-500 uppercase -mt-1">Unisex Haute Coiffure</span>
       </a>
 
       <!-- Desktop Nav -->
@@ -66,9 +66,9 @@
         <a href="#location" class="text-neutral-700 hover:text-obsidian transition-colors">Studio & Map</a>
       </nav>
 
-      <!-- Desktop CTAs -->
+      <!-- Desktop CTAs (Fixed: Standard casing, solid dark background) -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="#booking" class="bg-obsidian text-alabaster px-6 py-2.5 text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+        <a href="#booking" class="bg-obsidian text-alabaster px-6 py-2.5 text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-colors">
           Reserve Appointment
         </a>
       </div>
@@ -86,28 +86,31 @@
       <a href="#stylists" class="mobile-nav-link text-base font-medium text-neutral-800">Master Stylists</a>
       <a href="#gallery" class="mobile-nav-link text-base font-medium text-neutral-800">Lookbook</a>
       <a href="#location" class="mobile-nav-link text-base font-medium text-neutral-800">Studio & Map</a>
-      <a href="#booking" class="mobile-nav-link text-center bg-obsidian text-alabaster py-3 text-xs font-semibold uppercase tracking-widest mt-2">Reserve Appointment</a>
+      <a href="#booking" class="mobile-nav-link text-center bg-obsidian text-alabaster py-3 text-sm font-semibold tracking-wide mt-2">Reserve Appointment</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative min-h-[85vh] flex items-center justify-center bg-linen/50 border-b border-softBorder overflow-hidden">
+  <!-- Hero Section (Fixed: Added pt-20 to clear fixed header) -->
+  <section class="relative min-h-[85vh] pt-20 flex items-center justify-center bg-linen/50 border-b border-softBorder overflow-hidden">
     <div class="absolute inset-0 z-0 opacity-25">
       <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Salon Interior" class="w-full h-full object-cover">
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
-      <span class="inline-block text-xs uppercase tracking-[0.3em] font-semibold text-deepGold mb-4">Precision Aesthetics & Bespoke Grooming</span>
+      <!-- Fixed: Title casing for better readability -->
+      <span class="inline-block text-sm tracking-wide font-semibold text-deepGold mb-4">Precision Aesthetics & Bespoke Grooming</span>
       <h1 class="font-editorial text-5xl sm:text-6xl md:text-7xl font-light text-obsidian leading-tight mb-6">
         Architectural beauty, sculptured for individuality.
       </h1>
       <p class="text-neutral-600 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10">
         A tranquil haven where precision French cut techniques meet organic scalp therapy and progressive men's texture tailoring.
       </p>
+      
+      <!-- Fixed: Swapped Primary/Secondary button weights -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#services" class="w-full sm:w-auto px-8 py-3.5 bg-obsidian text-alabaster text-xs font-semibold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+        <a href="#services" class="w-full sm:w-auto px-8 py-3.5 border border-obsidian text-obsidian text-sm font-semibold tracking-wide hover:bg-obsidian hover:text-alabaster transition-colors">
           Explore Services
         </a>
-        <a href="#booking" class="w-full sm:w-auto px-8 py-3.5 border border-obsidian text-obsidian text-xs font-semibold uppercase tracking-widest hover:bg-obsidian hover:text-alabaster transition-colors">
+        <a href="#booking" class="w-full sm:w-auto px-8 py-3.5 bg-obsidian text-alabaster text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-colors">
           Book Consultation
         </a>
       </div>
@@ -151,7 +154,7 @@
     </div>
   </section>
 
-  <!-- Interactive Services Section (Browse by Department + Live Search + Hidden until clicked) -->
+  <!-- Interactive Services Section -->
   <section id="services" class="py-24 bg-linen/40 border-y border-softBorder">
     <div class="max-w-7xl mx-auto px-6">
       
@@ -180,13 +183,16 @@
 
       <!-- Department Sidebar + Services Display -->
       <div class="flex flex-col lg:flex-row gap-12 items-start">
+        
         <!-- Departments Navigation Sidebar -->
         <aside class="w-full lg:w-1/3 flex-shrink-0 bg-white border border-softBorder p-6 shadow-sm">
           <div class="flex items-center justify-between pb-4 mb-4 border-b border-softBorder">
-            <p class="text-xs uppercase tracking-[0.2em] font-semibold text-deepGold">Browse By Department</p>
+            <!-- Fixed: Title casing instead of all-caps -->
+            <p class="text-sm font-semibold tracking-wide text-deepGold">Browse By Department</p>
             <span class="text-[11px] text-neutral-400 font-medium" id="totalDeptsCount">14 Departments</span>
           </div>
-          <div id="departmentList" class="flex flex-col gap-1.5 max-h-[580px] overflow-y-auto pr-1">
+          <!-- Fixed: Increased gap-2 and pr-2 for balanced UI -->
+          <div id="departmentList" class="flex flex-col gap-2 max-h-[580px] overflow-y-auto pr-2">
             <!-- Injected via JavaScript -->
           </div>
 
@@ -198,7 +204,6 @@
 
         <!-- Services Content Area -->
         <div class="w-full lg:w-2/3">
-          <!-- Active Department Header Status -->
           <div id="servicesHeader" class="mb-6 pb-4 border-b border-softBorder flex justify-between items-end">
             <div>
               <p class="text-xs uppercase tracking-[0.2em] font-semibold text-deepGold mb-1" id="currentDeptLabel">Select a Department</p>
@@ -207,15 +212,9 @@
             <span class="text-xs text-neutral-500 font-medium" id="serviceCount"></span>
           </div>
 
-          <!-- Services Grid (Empty by default until a department is clicked or searched) -->
+          <!-- Services Grid -->
           <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div class="p-12 text-center text-neutral-500 border border-dashed border-softBorder bg-white/70 w-full col-span-full">
-              <i data-lucide="layout-grid" class="w-8 h-8 mx-auto mb-3 text-neutral-400"></i>
-              <h4 class="font-editorial text-2xl text-obsidian mb-2">No Department Selected</h4>
-              <p class="text-xs leading-relaxed max-w-sm mx-auto">
-                Please select any department from the left menu or type in the search bar above to view the services.
-              </p>
-            </div>
+            <!-- Injected via JavaScript (Auto-loads on page render now) -->
           </div>
           
           <!-- No Results Search State -->
@@ -249,7 +248,8 @@
         </div>
         <div class="text-xs uppercase tracking-widest text-deepGold font-semibold mb-1">Creative Director & Precision Cut</div>
         <h3 class="font-editorial text-3xl font-light text-obsidian mb-1">Marcus Vance</h3>
-        <p class="text-[11px] uppercase tracking-wider text-neutral-400 mb-4">14+ Years Experience | London Academy Alum</p>
+        <!-- Fixed: Larger text-xs and standard casing for readability -->
+        <p class="text-xs tracking-wide text-neutral-400 mb-4">14+ Years Experience | London Academy Alum</p>
         <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
           Specializes in geometric dry cuts, architectural bobs, and seamless weight distribution that grows out effortlessly over months.
         </p>
@@ -257,7 +257,7 @@
           <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Precision Cutting</span>
           <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Editorial Styling</span>
         </div>
-        <a href="#booking" onclick="preselectStylist('Marcus Vance')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-[11px] uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors">
+        <a href="#booking" onclick="preselectStylist('Marcus Vance')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-colors">
           Book With Marcus
         </a>
       </div>
@@ -269,7 +269,7 @@
         </div>
         <div class="text-xs uppercase tracking-widest text-deepGold font-semibold mb-1">Master Colorist & Balayage Artisan</div>
         <h3 class="font-editorial text-3xl font-light text-obsidian mb-1">Maya Rao</h3>
-        <p class="text-[11px] uppercase tracking-wider text-neutral-400 mb-4">11+ Years Experience | Paris Color Certified</p>
+        <p class="text-xs tracking-wide text-neutral-400 mb-4">11+ Years Experience | Paris Color Certified</p>
         <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
           Celebrated for dimensional French balayage, corrective color alchemy, and luminous, damage-free blonde formulations tailored to Asian hair undertones.
         </p>
@@ -277,7 +277,7 @@
           <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Balayage Alchemy</span>
           <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Corrective Color</span>
         </div>
-        <a href="#booking" onclick="preselectStylist('Maya Rao')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-[11px] uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors">
+        <a href="#booking" onclick="preselectStylist('Maya Rao')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-colors">
           Book With Maya
         </a>
       </div>
@@ -289,7 +289,7 @@
         </div>
         <div class="text-xs uppercase tracking-widest text-deepGold font-semibold mb-1">Master Barber & Texture Architect</div>
         <h3 class="font-editorial text-3xl font-light text-obsidian mb-1">Aryan Kapoor</h3>
-        <p class="text-[11px] uppercase tracking-wider text-neutral-400 mb-4">9+ Years Experience | Traditional Wet Shave Master</p>
+        <p class="text-xs tracking-wide text-neutral-400 mb-4">9+ Years Experience | Traditional Wet Shave Master</p>
         <p class="text-neutral-600 text-xs font-light leading-relaxed mb-6 flex-grow">
           An authority on surgical skin fades, straight-razor ergonomics, and facial hair structural mapping to complement individual facial geometry.
         </p>
@@ -297,7 +297,7 @@
           <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Skin Fades</span>
           <span class="text-[10px] px-2.5 py-1 bg-linen text-neutral-700 tracking-wider">Beard Sculpting</span>
         </div>
-        <a href="#booking" onclick="preselectStylist('Aryan Kapoor')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-[11px] uppercase tracking-widest font-semibold hover:bg-neutral-800 transition-colors">
+        <a href="#booking" onclick="preselectStylist('Aryan Kapoor')" class="w-full py-2.5 text-center bg-obsidian text-alabaster text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-colors">
           Book With Aryan
         </a>
       </div>
@@ -369,10 +369,12 @@
         </a>
       </div>
 
+      <!-- Map overlay banner -->
       <div class="absolute bottom-6 left-6 right-6 md:left-8 md:right-auto md:max-w-xl z-20 bg-[#121212] text-white p-3.5 shadow-2xl flex items-center justify-between gap-4 border border-neutral-800">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-[#CCFF00] flex-shrink-0 flex items-center justify-center text-black font-bold">
-            <i data-lucide="map-pin" class="w-5 h-5 text-black"></i>
+          <!-- Fixed: Integrated icon styling -->
+          <div class="w-10 h-10 bg-white flex-shrink-0 flex items-center justify-center text-obsidian font-bold">
+            <i data-lucide="map-pin" class="w-5 h-5 text-obsidian"></i>
           </div>
           <div>
             <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-white">ATELIER ÉLAN SALON</div>
@@ -381,12 +383,13 @@
             </div>
           </div>
         </div>
+        <!-- Fixed: Button styling harmonized with the rest of the site -->
         <a 
           href="https://www.google.com/maps/dir/?api=1&destination=110,+Andrahalli+Main+Rd,+Lingadeeranhalli,+Syndicate+Bank+Layout,+Bengaluru,+Karnataka+560091" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="flex-shrink-0 px-4 py-2.5 bg-[#CCFF00] hover:bg-[#b8e600] text-black text-xs font-bold uppercase tracking-wider transition-colors shadow-md">
-          GET DIRECTIONS
+          class="flex-shrink-0 px-5 py-2.5 bg-white hover:bg-neutral-200 text-obsidian text-xs font-semibold tracking-wide transition-colors shadow-sm rounded-sm">
+          Get Directions
         </a>
       </div>
     </div>
@@ -446,7 +449,7 @@
           <textarea id="clientNotes" rows="3" placeholder="Tell us about previous color treatments, allergies, or styling goals..." class="w-full px-4 py-3 bg-white border border-softBorder focus:border-obsidian focus:outline-none text-sm"></textarea>
         </div>
 
-        <button type="submit" class="w-full py-4 bg-obsidian text-alabaster text-xs font-semibold uppercase tracking-[0.2em] hover:bg-neutral-800 transition-colors shadow-sm">
+        <button type="submit" class="w-full py-4 bg-obsidian text-alabaster text-sm font-semibold tracking-wide hover:bg-neutral-800 transition-colors shadow-sm">
           Confirm Reservation Request
         </button>
 
@@ -457,7 +460,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (Fixed: Updated Headers to <h3> and removed all-caps) -->
   <footer class="bg-obsidian text-alabaster pt-16 pb-12 border-t border-neutral-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
@@ -470,7 +473,7 @@
         </div>
 
         <div>
-          <h4 class="text-xs uppercase tracking-widest text-neutral-300 font-semibold mb-4">Navigation</h4>
+          <h3 class="text-sm tracking-wide text-neutral-300 font-semibold mb-4">Navigation</h3>
           <ul class="space-y-2 text-xs text-neutral-400 font-light">
             <li><a href="#about" class="hover:text-alabaster transition-colors">Salon Ethos</a></li>
             <li><a href="#services" class="hover:text-alabaster transition-colors">Our Services</a></li>
@@ -481,7 +484,7 @@
         </div>
 
         <div>
-          <h4 class="text-xs uppercase tracking-widest text-neutral-300 font-semibold mb-4">Sanitation & Standards</h4>
+          <h3 class="text-sm tracking-wide text-neutral-300 font-semibold mb-4">Sanitation & Standards</h3>
           <ul class="space-y-2 text-xs text-neutral-400 font-light">
             <li>• Hospital-Grade UV & Autoclave Sterilization</li>
             <li>• Single-Use Organic Bamboo Linens</li>
@@ -491,7 +494,7 @@
         </div>
 
         <div>
-          <h4 class="text-xs uppercase tracking-widest text-neutral-300 font-semibold mb-4">Bengaluru Flagship</h4>
+          <h3 class="text-sm tracking-wide text-neutral-300 font-semibold mb-4">Bengaluru Flagship</h3>
           <p class="text-xs text-neutral-400 font-light leading-relaxed mb-3">
             110, Andrahalli Main Rd, Lingadeeranhalli, Syndicate Bank Layout, Bengaluru, KA 560091
           </p>
@@ -502,7 +505,8 @@
 
       <div class="border-t border-neutral-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-light">
         <p>© 2026 Atelier Élan Salon Studio. All rights reserved.</p>
-        <p class="mt-2 sm:mt-0">Designed for GitHub Pages & Production Deployment.</p>
+        <!-- Fixed: Added Custom Credit Message as requested -->
+        <p class="mt-2 sm:mt-0">created by Krishna Bhagat number 7782962661</p>
       </div>
     </div>
   </footer>
@@ -691,6 +695,11 @@
         btn.onclick = () => selectDepartment(dept, btn);
         deptListEl.appendChild(btn);
       });
+
+      // Fixed: Automatically select the first department so the user doesn't see an empty state
+      if (departments.length > 0) {
+        selectDepartment(departments[0], deptListEl.firstElementChild);
+      }
     }
 
     // Select Department handler
@@ -730,21 +739,10 @@
       }
 
       if (query === '') {
-        // If search is empty, return to empty default prompt
-        servicesGridEl.innerHTML = `
-          <div class="p-12 text-center text-neutral-500 border border-dashed border-softBorder bg-white/70 w-full col-span-full">
-            <i data-lucide="layout-grid" class="w-8 h-8 mx-auto mb-3 text-neutral-400"></i>
-            <h4 class="font-editorial text-2xl text-obsidian mb-2">No Department Selected</h4>
-            <p class="text-xs leading-relaxed max-w-sm mx-auto">
-              Please select any department from the left menu or type in the search bar above to view the services.
-            </p>
-          </div>`;
-        deptLabelEl.innerText = "Select a Department";
-        deptTitleEl.innerText = "To view available services";
-        serviceCountEl.innerText = "";
-        servicesGridEl.classList.remove('hidden');
-        noResultsEl.classList.add('hidden');
-        lucide.createIcons();
+        // Fixed: Re-select the first department if they clear the search bar entirely
+        if (departments.length > 0) {
+          selectDepartment(departments[0], deptListEl.firstElementChild);
+        }
         return;
       }
 
